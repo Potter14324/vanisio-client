@@ -1,1 +1,2 @@
-{ "name": "Leo", "color": "cecece", hat: 4 }
+{ name: "Leo", color: "cecece", hat: 4 }
+{ name: "test", color: "#ffff" }
