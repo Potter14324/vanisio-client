@@ -11,7 +11,7 @@
     <script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/5qcenVbrhOy8zihcc2aHOWD4/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-0UmWi2drUOFtiIl9tXA3B9fWn6Oz5K3vecq0zC8vAzesBQkPzPdlJKXnimDbxieW"></script>
     <script src="https://www.google.com/recaptcha/api.js?render=explicit" async="" defer=""></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/style.css"> <!-- Bu satırı ekleyin, css/style.css yolunu kontrol edin -->
+    <style id="external-css"></style> <!-- Dış CSS dosyasını buraya ekleyeceğiz -->
 </head>
 <body>
     <div id="app">
@@ -29,5 +29,23 @@
         </div>
     </div>
     <canvas id="canvas" tabindex="0"></canvas>
+    
+    <script>
+        // CSS dosyasının URL'si
+        var cssUrl = "https://raw.githubusercontent.com/controlvanis/vanisio-client/main/css/style.css";
+
+        // CSS dosyasını çekmek için XMLHttpRequest kullanma
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", cssUrl, true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                // CSS dosyasını al ve <style> etiketi içine ekle
+                var cssText = xhr.responseText;
+                var styleElement = document.getElementById("external-css");
+                styleElement.innerText = cssText;
+            }
+        };
+        xhr.send();
+    </script>
 </body>
 </html>
