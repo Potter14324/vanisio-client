@@ -17,15 +17,4 @@ Tag Id: ${s.tagId}`),p.toast.fire({type:"info",title:"Please check your clipboar
 const bar = document.querySelector(".bar");if (bar) {const vv = document.createElement('div');vv.innerHTML = `<a style="color: rgb(232, 67, 178);" href="https://cdn.discordapp.com/attachments/1211711302544920596/1211711317900132373/image.png?ex=65ef311a&is=65dcbc1a&hm=9326bd36b8d788238712477eba4caf562429bab61526ea90a41ad1a7fd1addff&" target="_blank">Colored Name</a><a style="margin-left:20px;color: rgb(232, 67, 178);" href="https://cdn.discordapp.com/attachments/1211711302544920596/1211711317900132373/image.png?ex=65ef311a&is=65dcbc1a&hm=9326bd36b8d788238712477eba4caf562429bab61526ea90a41ad1a7fd1addff&" target="_blank">Hats</a>`;bar.appendChild(vv);}
 
 
-  s("p-check", {
-                         staticClass: "p-switch",
-                         attrs: {
-                             checked: e.showDir
-                         },
-                         on: {
-                             change: function(t) {
-                                 return e.change("showDir", t)
-                             }
-                         }
-                     }, [e._v("(BETA) Show direction")]), e._v(" "),
-                    
+  
